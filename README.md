@@ -1,8 +1,6 @@
 # scaling machine learning in 3 weeks course
 Scaling Machine Learning in Three Week course in a collaboration with O'Reilly following the guidance in this [book](https://amzn.to/3WgHQvd).
 
-Machine Learning with Apache Spark Notebooks
-==========================
 This project contains the example code and solutions to the exercises in O'Reilly course.
 
 ## Course description
