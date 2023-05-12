@@ -8,32 +8,37 @@ Join expert Adi Polak to go in-depth into Spark, the most widely used technology
 
 
 # Quick Start
+_Prerequisites:_
+* make sure you have docker installed, if not skip to the notebooks viewer.
 
-## Want to play with these notebooks online without having to install anything?
-TBD as we evaluate free platforms, if you have any recommendations, please reach out on [@AdiPolak](https://twitter.com/AdiPolak)
 
-At the moment, you can use docker with running the following command. Memory is for providing jupyter environment with more memory, --mount is for mounting the local library, where all you work will be saved. `adipolak/ml-with-apache-spark` is an image in docker hub. -p are the port used for interacting with jupyter notebook.
+From you local terminal, clone this repository, and enter the `scaling-machine-lerning-course` directory with
+
+```code
+gh repo clone adipolak/scaling-machine-learning-course
+cd scaling-machine-learning-course
+```
+From the `scaling-machine-lerning-course` directory, run the following docker run command:
 
 ```code
 docker run -it --memory="28g" --memory-swap="30g"  -p 8888:8888 --mount type=bind,source=$(pwd),target=/home/jovyan adipolak/ml-with-apache-spark
+```
+
+From here, you will see the docker run output, make sure to copy the url with the token, it would look something like this:
+
+```code
+http://127.0.0.1:8888/?token=379fbbea91af62751b2616331d688f7a45db215b62dcfb04
 ```
 
 ## Just want to quickly look at some notebooks, without executing any code?
 Brows it on the [Juypyter.org notebook viewer](https://nbviewer.org/github/adipolak/scaling-machine-learning-course/tree/main/notebooks/)
 <img src="https://nbviewer.jupyter.org/static/img/nav_logo.svg" width="90" />
 
-## Want to run this project using a Docker image?
-
-Read the Docker instructions - TBD
-
-
-## Want to install this project on your own machine?
-TBD - would probably be using Docker.
-
 
 # FAQ
 
-**Which Python version should I use?**
+**Is AMD/new M1/M2 supported?**
+Not currently, in the future I will add support for those as well.
 
 
 **I get Py4JJavaError: An error occurred while calling o{some number}.parquet. (Reading Parquet file), what to do?**
